@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Tag from '../components/Tag.astro';
+import Markquee from '../components/Markquee.astro';
+import tags from '../tags';
+
+function splitArray(arr: any[], chunkSize: number) {
+  const result = [];
+  for (let i = 0; i < arr.length; i += chunkSize) {
+    result.push(arr.slice(i, i + chunkSize));
+  }
+  return result;
+}
+
+const rowTags = splitArray(tags, 5);
+console.log(rowTags)
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="flex flex-col h-[100vh] justify-center">
+	<div class="mt-4 mb-8 flex flex-col gap-2 max-w-full overflow-x-hidden">
+		{
+			rowTags.map(row => (
+				<Markquee velocity={20}>
+					{row.map((tag) => (
+						<Tag emoji={tag.emoji} name={tag.name} description={tag.description} />
+					))}
+				</Markquee>
+		))}
+	</div>
+ 	<main class="container mx-auto px-4">
+		<div class="flex flex-col gap-y-6 text-gray-900">
+			<div>
+				<h1 class="text-2xl"><strong>もっと<span class="text-gray-600 font-normal">@mottox2</span></strong>といいます。</h1>
+				<p class="text-2xl mt-0.5">趣味でワイワイできそうな友達を探しています。</p>
+				<p class="text-sm text-gray-600 mt-2">ハマったものや影響を受けたものを並べてみました。ぴんときた方とは仲良くなれそうな気がします。</p>
+			</div>
+		 	<div class="hidden flex">
+				<div class="w-1/2">
+					Left
+				</div>
+				<div class="w-1/2">
+					Right
+				</div>
+			</div>
+		 	<div class="flex">
+				<Tag emoji="📨" name="Twitter" description="ダイレクトメッセージでどうぞ" />
+			</div>
+		</div>
+	</main>
+		</div>
+</Layout>
