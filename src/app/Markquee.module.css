@@ -1,0 +1,21 @@
+@keyframes slide {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+}
+
+.container {
+  margin-left: -10%;
+}
+
+.container:hover .item {
+  animation-play-state: paused
+}
+
+.item {
+  animation: slide var(--speed) linear infinite backwards;
+}

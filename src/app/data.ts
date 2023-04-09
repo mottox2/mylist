@@ -4,7 +4,7 @@ type Tag = {
   description: string
 }
 
-const tags : Tag[] = [
+const tags: Tag[] = [
   {
     emoji: '🎮',
     name: 'ヘブンバーンズレッド',
