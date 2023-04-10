@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google'
 import { Markquee } from './Markquee'
 import { Tag } from './Tag'
 import data from './data'
+import Link from 'next/link';
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -21,10 +22,11 @@ export default function Home() {
       <div className="mt-4 mb-8 flex flex-col gap-2 max-w-full overflow-x-hidden">
         {
           tags.map((row, i) => (
-            // rome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             <Markquee key={i} velocity={20}>
               {row.map((tag) => (
-                <Tag key={tag.name} emoji={tag.emoji} name={tag.name} description={tag.description} />
+                <Link href={`/keywords/${tag.name}`} key={tag.name}>
+                  <Tag key={tag.name} emoji={tag.emoji} name={tag.name} description={tag.description} />
+                </Link>
               ))}
             </Markquee>
           ))}

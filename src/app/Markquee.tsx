@@ -1,11 +1,10 @@
 "use client"
 
-import { useEffect, useRef } from "react";
+import { PropsWithChildren, useEffect, useRef } from "react";
 import styles from './Markquee.module.css'
 
-interface Props {
+type Props = PropsWithChildren & {
   velocity: number;
-  children: React.ReactNode;
 }
 
 export const Markquee: React.FC<Props> = (props) => {
