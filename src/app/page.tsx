@@ -3,6 +3,7 @@ import { Markquee } from './Markquee'
 import { Tag } from './Tag'
 import data from './data'
 import Link from 'next/link';
+import Script from 'next/script';
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -51,6 +52,12 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          console.log('script loaded')
+        `
+      }}>
+      </script>
     </div>
   )
 }

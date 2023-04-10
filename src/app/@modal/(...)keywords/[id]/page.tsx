@@ -15,8 +15,7 @@ export default function Page({ params }: any) {
   }
 
   return <div className="fixed top-0" >
-    <Link href="/" onClick={() => router.back()
-    }>Close</Link>
+    <Link href="/" onClick={() => router.back()}>Close</Link>
     {name}
   </div>
 }
