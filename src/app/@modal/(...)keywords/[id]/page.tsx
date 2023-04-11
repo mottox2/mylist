@@ -1,21 +1,24 @@
 'use client'
-import Link from 'next/link'
 import data from '../../../data'
 import { useRouter } from 'next/navigation'
+import { Modal } from './modal'
+import { Card } from '@/app/keywords/[id]/card'
 
 export default function Page({ params }: any) {
   const name = decodeURI(params.id)
+  // FIXME: ClientComponentでデータへの参照を行うべきではない
   const tag = data.find((tag) => tag.name === name)
   const router = useRouter();
+  const hasContent = tag?.content
 
-  console.log('===', name)
-
-  if (!tag) {
-    return <div>Not found</div>
+  if (!tag || !hasContent) {
+    router.back();
+    return
   }
 
-  return <div className="fixed top-0" >
-    <Link href="/" onClick={() => router.back()}>Close</Link>
-    {name}
-  </div>
+  return <Modal onClose={() => {
+    router.back();
+  }}>
+    <Card {...tag} />
+  </Modal>
 }

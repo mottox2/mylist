@@ -23,11 +23,13 @@ export default function Home() {
         {
           tags.map((row, i) => (
             <Markquee key={i} velocity={20}>
-              {row.map((tag) => (
-                <Link href={`/keywords/${tag.name}`} key={tag.name}>
-                  <Tag key={tag.name} emoji={tag.emoji} name={tag.name} description={tag.description} />
+              {row.map((tag) => {
+                const hasContent = !!tag.content
+                if (!hasContent) return <Tag key={tag.name} emoji={tag.emoji} name={tag.name} description={tag.description} />
+                return <Link href={`/keywords/${tag.name}`} key={tag.name}>
+                  <Tag key={tag.name} emoji={tag.emoji} name={tag.name} description={tag.description} hasLink={hasContent} />
                 </Link>
-              ))}
+              })}
             </Markquee>
           ))}
       </div>
@@ -48,7 +50,7 @@ export default function Home() {
           </div>
           <div className="flex">
             <a href="https://twitter.com/mottox2" target="_blank" rel="noopener noreferrer">
-              <Tag emoji="📨" name="Twitter" description="ダイレクトメッセージでどうぞ" />
+              <Tag emoji="📨" name="Twitter" description="ダイレクトメッセージでどうぞ" hasLink />
             </a>
           </div>
         </div>
