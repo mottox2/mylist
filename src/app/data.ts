@@ -2,38 +2,50 @@ type Tag = {
   emoji: string
   name: string
   description: string
+  content?: string
 }
 
 const tags: Tag[] = [
   {
     emoji: '🎮',
     name: 'ヘブンバーンズレッド',
-    description: 'key作品が好きでAB!コラボから'
+    description: 'key作品が好きでAB!コラボから',
   },
   {
     emoji: '🎮',
     name: 'スプラトゥーン',
-    description: 'ローラーとエクスプロッシャー'
+    description: 'ローラーとエクスプロッシャー',
+    content: `スプラトゥーン2と3をやっています。一応、どちらともX帯にいます。
+ヴァリアブルローラーとエクスプロッシャーを使うことが多く、後ろから支援するポジションにいることが多いです。
+ゲーム実況者ははんじょうやかよたそさんが好きです。ちょこぺろさんの配信を見るのも好きでした。`
   },
   {
     emoji: '👞',
     name: 'ジム',
-    description: '週イチで通ってます'
+    description: '週イチで通ってます',
+    content: `腰痛対策のために通い始めました。腰痛は改善しましたが、数字が変わっていくのが嬉しくて今も続けています。
+腰痛に悩んでいるデスクワーカーは一度トレーナーさんに見てもらうといい気がします。`
   },
   {
     emoji: '🎮',
     name: 'APEX Legends',
-    description: 'ゲーム実況もよく見ます'
+    description: 'ゲーム実況もよく見ます',
+    content: `基本的にソロでやってます。コースティングやローバを使っていて、だいたいダイヤ4あたりにいます。
+競技の選手やVTuberのゲーム配信を見ています。フレンド募。`
   },
   {
     emoji: '📺',
     name: 'ラブライブ！',
-    description: 'μ’sがめちゃくちゃ好きでした'
+    description: 'μ’sがめちゃくちゃ好きでした',
+    content: `μ’sが好きでFinal LoveLive!やAqoursのライブにも何回か行きました。
+Snow halationが特に好きで穂乃果ソロのオレンジサイリウムは最高だと思っています。μ’sでは穂乃果、Aqoursでは曜ちゃん、虹ヶ咲では彼方ちゃんが好きです。`
   },
   {
     emoji: '🎮',
     name: 'プロジェクトセカイ',
-    description: '推しはまふゆとLeo/need'
+    description: '推しはまふゆとLeo/need',
+    content: `声優とボカロの声をうまく調和させていて、聴いてて心地よいです。
+どのユニットも好きですが、特にLeo/need推し。オリジナル曲では『ステラ』『STAGE OF SEKAI』『青く駆けろ！』、カバー曲では『タイムマシン』『ray』あたりが好き。`
   },
   {
     emoji: '🎺',
@@ -58,7 +70,7 @@ const tags: Tag[] = [
   {
     emoji: '🎵',
     name: '口笛',
-    description: '知ってる曲ならだいたい吹けます'
+    description: '知ってる曲なら吹けます'
   },
   {
     emoji: '📕',
@@ -103,7 +115,9 @@ const tags: Tag[] = [
   {
     emoji: '✏️',
     name: '技術同人誌',
-    description: 'プログラミング本の執筆'
+    description: 'プログラミング本の執筆',
+    content: `自分の好きな技術に関する本を書いて、即売会に参加していました。表紙を作るのが好きで、毎回楽しく作っていました。
+コロナが落ち着いてオフライン即売会も増えてきたので、新刊を出したいです。`
   },
   {
     emoji: '🎵',
@@ -113,7 +127,7 @@ const tags: Tag[] = [
   {
     emoji: '👞',
     name: '散歩',
-    description: '知らない道が好きです'
+    description: '知らない道が好き'
   },
   {
     emoji: '🎵',
@@ -156,6 +170,8 @@ const tags: Tag[] = [
     description: '異世界転移物では一番'
   },
   // NEWGAME!
+  // ロックマンエグゼ
+  // カービィーのエアライド
   // ダンまち
   // すかすか
   // リズと青い鳥
