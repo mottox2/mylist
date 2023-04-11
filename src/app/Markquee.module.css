@@ -12,6 +12,11 @@
   margin-left: -10%;
 }
 
+@media (hover: hover) {
+  .container:hover {
+    animation-play-state: paused;
+  }
+}
 .container:hover .item {
   animation-play-state: paused
 }

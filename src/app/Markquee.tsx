@@ -22,13 +22,13 @@ export const Markquee: React.FC<Props> = (props) => {
     <div ref={ref} className={`${styles.item} flex`}>
       {props.children}
     </div>
-    <div className={`${styles.item} flex`}>
+    <div className={`${styles.item} flex`} aria-hidden>
       {props.children}
     </div>
-    <div className={`${styles.item} flex`}>
+    <div className={`${styles.item} flex`} aria-hidden>
       {props.children}
     </div>
-    <div className={`${styles.item} flex`}>
+    <div className={`${styles.item} flex`} aria-hidden>
       {props.children}
     </div>
   </div>

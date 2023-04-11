@@ -3,7 +3,6 @@ import { Markquee } from './Markquee'
 import { Tag } from './Tag'
 import data from './data'
 import Link from 'next/link';
-import Script from 'next/script';
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +19,7 @@ const tags = splitArray(data, 5)
 export default function Home() {
   return (
     <div className="flex flex-col h-[100vh] justify-center">
-      <div className="mt-4 mb-8 flex flex-col gap-2 max-w-full overflow-x-hidden">
+      <div className="mt-2 mb-6 flex flex-col gap-2 max-w-full overflow-x-hidden py-2">
         {
           tags.map((row, i) => (
             <Markquee key={i} velocity={20}>
@@ -48,16 +47,19 @@ export default function Home() {
             </div>
           </div>
           <div className="flex">
-            <Tag emoji="📨" name="Twitter" description="ダイレクトメッセージでどうぞ" />
+            <a href="https://twitter.com/mottox2" target="_blank" rel="noopener noreferrer">
+              <Tag emoji="📨" name="Twitter" description="ダイレクトメッセージでどうぞ" />
+            </a>
           </div>
         </div>
       </main>
       <script dangerouslySetInnerHTML={{
         __html: `
-          console.log('script loaded')
-        `
-      }}>
-      </script>
+console.log(\`ℹ️ ソースコードはこちら
+https://github.com/mottox2/mylist
+Starをもらえるとモチベが上がります！
+\`)`
+      }} />
     </div>
   )
 }
