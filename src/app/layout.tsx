@@ -13,14 +13,14 @@ export const metadata = {
     url: '/',
     type: 'website',
     siteName: 'mottox2',
-    images: '/og-image',
+    images: '/og-image.png',
   },
   twitter: {
     card: 'summary_large_image',
     title,
     description,
     creator: '@mottox2',
-    images: '/og-image',
+    images: '/og-image.png',
   }
 }
 

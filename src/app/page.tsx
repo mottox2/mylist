@@ -1,8 +1,9 @@
 import { Inter } from 'next/font/google'
 import { Markquee } from './Markquee'
 import { Tag } from './Tag'
-import data from './data'
+import data, { creatorTags } from './data'
 import Link from 'next/link';
+import { OnlyDevtools } from './only-devtools';
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -15,6 +16,7 @@ function splitArray<T>(arr: T[], chunkSize: number) {
 }
 
 const tags = splitArray(data, 5)
+const secretTags = splitArray(creatorTags, 5)
 
 export default function Home() {
   return (
@@ -32,11 +34,25 @@ export default function Home() {
               })}
             </Markquee>
           ))}
+        <OnlyDevtools>
+          {
+            secretTags.map((row, i) => (
+              <Markquee key={i} velocity={20}>
+                {row.map((tag) => {
+                  const hasContent = !!tag.content
+                  if (!hasContent) return <Tag key={tag.name} emoji={tag.emoji} name={tag.name} description={tag.description} />
+                  return <Link href={`/keywords/${tag.name}`} key={tag.name}>
+                    <Tag key={tag.name} emoji={tag.emoji} name={tag.name} description={tag.description} hasLink={hasContent} />
+                  </Link>
+                })}
+              </Markquee>
+            ))}
+        </OnlyDevtools>
       </div>
       <main className="container mx-auto px-4">
         <div className="flex flex-col gap-y-6 text-gray-900">
           <div>
-            <h1 className="text-2xl"><strong>もっと<span className="text-gray-600 font-normal">@mottox2</span></strong>といいます。</h1>
+            <h1 className="text-2xl"><strong>もっと</strong>といいます。</h1>
             <p className="text-2xl mt-0.5">趣味でワイワイできそうな友達を探しています。</p>
             <p className="text-sm text-gray-600 mt-2">ハマったものや影響を受けたものを並べてみました。ぴんときた方とは仲良くなれそうな気がします。</p>
           </div>

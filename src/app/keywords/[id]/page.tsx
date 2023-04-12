@@ -1,12 +1,12 @@
 import { Tag } from '@/app/Tag'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
-import data from '../../data'
+import data, { creatorTags } from '../../data'
 import { Card } from './card'
 
 export default function Page({ params }: any) {
   const name = decodeURI(params.id)
-  const tag = data.find((tag) => tag.name === name)
+  const tag = [...data, ...creatorTags].find((tag) => tag.name === name)
   const hasContent = !!(tag?.content)
 
   if (!tag || !hasContent) {

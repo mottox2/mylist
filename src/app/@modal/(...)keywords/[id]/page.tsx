@@ -1,5 +1,5 @@
 'use client'
-import data from '../../../data'
+import data, { creatorTags } from '../../../data'
 import { useRouter } from 'next/navigation'
 import { Modal } from './modal'
 import { Card } from '@/app/keywords/[id]/card'
@@ -7,7 +7,7 @@ import { Card } from '@/app/keywords/[id]/card'
 export default function Page({ params }: any) {
   const name = decodeURI(params.id)
   // FIXME: ClientComponentでデータへの参照を行うべきではない
-  const tag = data.find((tag) => tag.name === name)
+  const tag = [...data, ...creatorTags].find((tag) => tag.name === name)
   const router = useRouter();
   const hasContent = tag?.content
 

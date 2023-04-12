@@ -177,7 +177,64 @@ Snow halationが特に好きで穂乃果ソロのオレンジサイリウムは�
   // リズと青い鳥
   // ヒロアカ
   // 冴えない彼女の育てかた
+]
 
+export const creatorTags: Tag[] = [
+  {
+    emoji: '💻',
+    name: 'React',
+    description: '8年ぐらい書いてます',
+  },
+  {
+    emoji: '🎨',
+    name: 'Figma',
+    description: 'プラグイン開発やってます',
+    content: `本業の会社でも頑張って導入しました。コラボレーションツールとしては圧倒的だと思っています。
+個人だけではなく会社の自由研究でもプラグインを開発しました。
+実はデザインツール単体として見るとSketchの方が好きです。`
+  },
+  {
+    emoji: '💻',
+    name: 'TypeScript',
+    description: '型がないと不安です',
+  },
+  {
+    emoji: '📔',
+    name: 'Obsidian',
+    description: 'メモ書きに使ってます',
+  },
+  {
+    emoji: '💻',
+    name: 'Next.js',
+    description: 'このサイトもNext.js製',
+    content: `今やスタンダードになったReactベースのフレームワークです。
+このサイトでは、Next.js 13で導入されたApp Routerを利用した実装を行っています。もちろん、canaryを使って人柱になってます。`
+  },
+  {
+    emoji: '📔',
+    name: 'esa.io',
+    description: '触り心地が好き',
+  },
+  {
+    emoji: '💻',
+    name: 'Astro',
+    description: 'ドキュメント翻訳',
+  },
+  {
+    emoji: '💻',
+    name: 'デザインエンジニア',
+    description: 'デザインとエンジニアリング',
+  },
+  {
+    emoji: '💻',
+    name: 'Gatsby',
+    description: '本を書いたOSS',
+  },
+  {
+    emoji: '📱',
+    name: 'マッチングアプリ',
+    description: '大苦戦',
+  },
 ]
 
 export default tags
