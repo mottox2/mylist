@@ -20,7 +20,7 @@ const secretTags = splitArray(creatorTags, 5)
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-[100vh] justify-center">
+    <div className="flex flex-col min-h-[100vh] justify-center py-8">
       <div className="mt-2 mb-6 flex flex-col gap-2 max-w-full overflow-x-hidden py-2">
         {
           tags.map((row, i) => (
@@ -64,9 +64,12 @@ export default function Home() {
               Right
             </div>
           </div>
-          <div className="flex">
+          <div className="flex flex-wrap gap-y-2 -mx-2">
             <a href="https://twitter.com/mottox2" target="_blank" rel="noopener noreferrer">
-              <Tag emoji="📨" name="Twitter" description="ダイレクトメッセージでどうぞ" hasLink />
+              <Tag emoji="📨" name="Twitter" description="DM開放してます" hasLink />
+            </a>
+            <a href="http://twitter.com/share?url=https://mylist.mottox2.com&hashtags=もっとのマイリスト" target="_blank" rel="noopener noreferrer">
+              <Tag emoji="🚀" name="このサイトをシェア" description="シェアして応援" hasLink />
             </a>
           </div>
         </div>

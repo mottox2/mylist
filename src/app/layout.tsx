@@ -1,10 +1,12 @@
+import { Metadata } from 'next'
 import { PropsWithChildren } from 'react'
 import './globals.css'
 
-const title = '@mottox2のハマったもの・影響を受けたものリスト'
-const description = '@mottox2のハマったもの・影響を受けたものリストです。気が合いそうな人は友達になりましょう！。'
+const title = 'もっとのマイリスト'
+const description = 'もっと（@mottox2）のハマったもの・影響を受けたものリストです。気が合いそうな人は友達になりましょう！。'
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL('https://mylist.mottox2.com/'),
   title,
   description,
   openGraph: {

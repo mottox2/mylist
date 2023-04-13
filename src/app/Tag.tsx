@@ -10,7 +10,7 @@ export interface TagProps {
 export const Tag: React.FC<TagProps> = (props) => {
   const { emoji, name, description, hasLink } = props;
   return <div className={clsx({
-    "whitespace-nowrap bg-white rounded-full pl-5 pr-6 py-2 flex items-center mx-1.5 relative": true,
+    "whitespace-nowrap bg-white rounded-full pl-5 pr-6 py-2 flex items-center mx-1 relative": true,
     "pr-8 hover:shadow cursor-hover": hasLink,
   })}>
     <div className="text-3xl">{emoji}</div>

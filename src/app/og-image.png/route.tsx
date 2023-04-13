@@ -18,8 +18,6 @@ export interface Props {
   description: string;
 }
 
-export const contentType = 'image/png'
-
 const Tag: React.FC<Props> = (props) => {
   const { emoji, name, description } = props;
   return <div tw="whitespace-nowrap bg-white rounded-full pl-5 pr-6 py-2 flex items-center hover:shadow mx-1 relative">
