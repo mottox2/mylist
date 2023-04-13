@@ -1,8 +1,8 @@
-import { Tag } from '@/app/Tag'
+import { Tag } from '@/Tag'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
-import data, { creatorTags } from '../../data'
-import { Card } from './card'
+import data, { creatorTags } from '@/data'
+import { Card } from './Card'
 
 export default function Page({ params }: any) {
   const name = decodeURI(params.id)

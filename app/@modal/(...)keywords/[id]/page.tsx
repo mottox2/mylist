@@ -1,8 +1,8 @@
 'use client'
-import data, { creatorTags } from '../../../data'
+import data, { creatorTags } from '@/data'
 import { useRouter } from 'next/navigation'
-import { Modal } from './modal'
-import { Card } from '@/app/keywords/[id]/card'
+import { Modal } from './Modal'
+import { Card } from '@/keywords/[id]/Card'
 
 export default function Page({ params }: any) {
   const name = decodeURI(params.id)

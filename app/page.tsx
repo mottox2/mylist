@@ -3,7 +3,7 @@ import { Markquee } from './Markquee'
 import { Tag } from './Tag'
 import data, { creatorTags } from './data'
 import Link from 'next/link';
-import { OnlyDevtools } from './only-devtools';
+import { OnlyDevtools } from './OnlyDevtools';
 
 // const inter = Inter({ subsets: ['latin'] })
 

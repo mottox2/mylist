@@ -3,7 +3,7 @@ import { PropsWithChildren } from 'react'
 import './globals.css'
 
 const title = 'もっとのマイリスト'
-const description = 'もっと（@mottox2）のハマったもの・影響を受けたものリストです。気が合いそうな人は友達になりましょう！。'
+const description = 'もっと（@mottox2）のハマったもの・影響を受けたものリストです。気が合いそうな人は友達になりましょう！'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mylist.mottox2.com/'),

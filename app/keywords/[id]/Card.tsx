@@ -1,6 +1,6 @@
 import React from "react"
-import { Tag } from "@/app/Tag"
-import type { TagProps } from "@/app/Tag"
+import { Tag } from "@/Tag"
+import type { TagProps } from "@/Tag"
 
 export const Card: React.FC<TagProps & {
   content?: string
